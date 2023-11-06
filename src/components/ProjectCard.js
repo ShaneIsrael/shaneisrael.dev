@@ -5,6 +5,19 @@ import LaunchIcon from '@mui/icons-material/Launch'
 import NewspaperIcon from '@mui/icons-material/Newspaper'
 
 const ProjectCard = ({ imageSrc, title, body, projectLink, site, article }) => {
+  function openProject() {
+    umami.track(`${title} - Source Opened`)
+    window.open(projectLink, '_blank')
+  }
+  function openSite() {
+    umami.track(`${title} - Live Site Opened`)
+    window.open(site, '_blank')
+  }
+  function openArticle() {
+    umami.track(`${title} - Article Opened`)
+    window.open(article, '_blank')
+  }
+
   return (
     <Card sx={{ height: '100%' }}>
       <Grid container direction="column" height="100%">
@@ -15,7 +28,7 @@ const ProjectCard = ({ imageSrc, title, body, projectLink, site, article }) => {
             image={imageSrc}
             alt="project logo"
             sx={{ padding: 1, pt: 1.5, objectFit: 'contain', cursor: 'pointer' }}
-            onClick={() => window.open(site ? site : projectLink, '_blank')}
+            onClick={() => (site ? openSite() : openProject())}
           />
           <CardContent sx={{ pt: 0.5 }}>
             <Typography gutterBottom variant="h5" component="div">
@@ -28,16 +41,16 @@ const ProjectCard = ({ imageSrc, title, body, projectLink, site, article }) => {
         </Grid>
         <Grid item>
           <CardActions sx={{ px: 2, pt: 0 }}>
-            <Box sx={{ cursor: 'pointer' }} onClick={() => window.open(projectLink, '_blank')}>
+            <Box sx={{ cursor: 'pointer' }} onClick={() => openProject()}>
               <GitHubIcon fontSize="medium" sx={{ mr: 0.5 }} />
             </Box>
             {site && (
-              <Box sx={{ cursor: 'pointer' }} onClick={() => window.open(site, '_blank')}>
+              <Box sx={{ cursor: 'pointer' }} onClick={() => openSite()}>
                 <LaunchIcon fontSize="medium" sx={{ mr: 0.5 }} />
               </Box>
             )}
             {article && (
-              <Box sx={{ cursor: 'pointer' }} onClick={() => window.open(article, '_blank')}>
+              <Box sx={{ cursor: 'pointer' }} onClick={() => openArticle()}>
                 <NewspaperIcon fontSize="medium" sx={{ mr: 0.5 }} />
               </Box>
             )}

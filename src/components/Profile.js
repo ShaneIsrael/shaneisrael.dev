@@ -14,7 +14,7 @@ const Profile = (props) => {
         <Avatar alt="Shane Israel" src={ProfilePicture} sx={{ width: 200, height: 200 }} />
         <Typography component="h1" variant="h3" align="center" color="text.primary" gutterBottom>
           Shane Israel
-          <Typography component="h2" variant="overline" fontSize={18} align="center" color="text.primary">
+          <Typography component="p" variant="overline" fontSize={18} align="center" color="text.primary">
             Software Engineer
           </Typography>
         </Typography>

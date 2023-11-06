@@ -94,6 +94,7 @@ export default function App() {
                 variant="outlined"
                 startIcon={<DownloadIcon />}
                 onClick={() => {
+                  umami.track('Resume Downloaded')
                   window.open('/resume.pdf', '_blank')
                 }}
               >
