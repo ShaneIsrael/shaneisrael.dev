@@ -48,17 +48,23 @@ const cards = [
     projectLink: 'https://github.com/ShaneIsrael/coop-friend-finder#readme',
   },
   {
+    imageSrc: 'https://avatars.githubusercontent.com/u/7954436?s=400&u=4ba58a603f845c88b5d2f3477232408c88b86954&v=4',
+    title: 'Snipping Tool Plus Plus',
+    body: 'Screen snip upload and sharing tool that I built while in college. Included an image editor and allowed saving across multiple devices. Featured on LifeHacker.',
+    projectLink: 'https://avatars.githubusercontent.com/u/7954436?s=400&u=4ba58a603f845c88b5d2f3477232408c88b86954&v=4',
+    article: 'https://lifehacker.com/snipping-tool-easily-sends-windows-screenshot-snippet-30775430',
+  },
+  {
     imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
     title: 'Plex Auto Genres',
     body: 'A simple, robust and configurable Python script that runs nightly and adds genre collection tags to your Plex media library. 144,000+ downloads.',
     projectLink: 'https://github.com/ShaneIsrael/plex-auto-genres#readme',
   },
   {
-    imageSrc: 'https://avatars.githubusercontent.com/u/7954436?s=400&u=4ba58a603f845c88b5d2f3477232408c88b86954&v=4',
-    title: 'Snipping Tool Plus Plus',
-    body: 'Screen snip upload and sharing tool that I built while in college. Included an image editor and allowed saving across multiple devices. Featured on LifeHacker.',
-    projectLink: 'https://avatars.githubusercontent.com/u/7954436?s=400&u=4ba58a603f845c88b5d2f3477232408c88b86954&v=4',
-    article: 'https://lifehacker.com/snipping-tool-easily-sends-windows-screenshot-snippet-30775430',
+    imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+    title: 'Nvidia Highlight Stitcher',
+    body: 'Python command line utility that uses ffmpeg to stitch your .mp4 clips created by Nvidia Shadowplay into a single combined video with added transitions between each clip.',
+    projectLink: 'https://github.com/ShaneIsrael/nvidia-highlight-stitcher#readme',
   },
 ]
 
@@ -85,7 +91,7 @@ export default function App() {
             <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
               <Button
                 color="info"
-                variant="contained"
+                variant="outlined"
                 startIcon={<DownloadIcon />}
                 onClick={() => {
                   window.open('/resume.pdf', '_blank')
@@ -98,10 +104,20 @@ export default function App() {
         </Box>
 
         <Container maxWidth="md">
-          <Stack spacing={2} mb={2}>
+          <Stack spacing={1} mb={2}>
             <Divider />
-            <Typography component="h1" variant="h4" align="center" color="text.primary" gutterBottom>
+            <Typography component="h1" variant="h4" align="center" color="text.primary">
               Personal Projects
+              <Typography
+                component="p"
+                align="center"
+                color="text.secondary"
+                fontStyle="italic"
+                fontWeight={400}
+                fontSize={14}
+              >
+                Just the ones that I have open sourced.
+              </Typography>
             </Typography>
             <Divider />
           </Stack>
@@ -115,13 +131,13 @@ export default function App() {
         </Container>
       </main>
       {/* Footer */}
-      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
+      <Box sx={{ bgcolor: 'background.paper', p: 5 }} component="footer">
+        {/* <Typography variant="h6" align="center" gutterBottom>
           Footer
         </Typography>
         <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
           not sure if I even need a footer yet
-        </Typography>
+        </Typography> */}
       </Box>
       {/* End footer */}
     </ThemeProvider>
