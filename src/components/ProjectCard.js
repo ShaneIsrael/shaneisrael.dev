@@ -15,7 +15,7 @@ const ProjectCard = ({ imageSrc, title, body, projectLink, site, article }) => {
             image={imageSrc}
             alt="project logo"
             sx={{ padding: 1, pt: 1.5, objectFit: 'contain', cursor: 'pointer' }}
-            onClick={() => window.open(site, '_blank')}
+            onClick={() => window.open(site ? site : projectLink, '_blank')}
           />
           <CardContent sx={{ pt: 0.5 }}>
             <Typography gutterBottom variant="h5" component="div">
