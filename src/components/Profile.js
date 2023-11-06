@@ -20,15 +20,24 @@ const Profile = (props) => {
         </Typography>
 
         <Stack direction="row" gap={2} mb={2}>
-          <Box sx={{ cursor: 'pointer' }} onClick={() => window.open('mailto:shanemisrael@gmail.com')}>
+          <Box sx={{ cursor: 'pointer' }} onClick={() => {
+            umami.track(`mailto contact - opened`)
+            window.open('mailto:shanemisrael@gmail.com')
+          }}>
             <EmailIcon fontSize="medium" sx={{ mr: 0.5 }} />
           </Box>
-          <Box sx={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/ShaneIsrael', '_blank')}>
+          <Box sx={{ cursor: 'pointer' }} onClick={() => {
+            umami.track(`GitHub Profile - opened`)
+            window.open('https://github.com/ShaneIsrael', '_blank')
+          }}>
             <GitHubIcon fontSize="medium" sx={{ mr: 0.5 }} />
           </Box>
           <Box
             sx={{ cursor: 'pointer' }}
-            onClick={() => window.open('https://www.linkedin.com/in/shane-israel-3a685ba1/', '_blank')}
+            onClick={() => {
+              umami.track(`LinkedIn Profile - opened`)
+              window.open('https://www.linkedin.com/in/shane-israel-3a685ba1/', '_blank')
+            }}
           >
             <LinkedInIcon fontSize="medium" sx={{ mr: 0.5 }} />
           </Box>
