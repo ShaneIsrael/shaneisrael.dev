@@ -8,7 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import DownloadIcon from '@mui/icons-material/Download'
 
 import Profile from './components/Profile'
-import { Divider } from '@mui/material'
+import { CssBaseline, Divider, Typography } from '@mui/material'
 import ProjectCard from './components/ProjectCard'
 
 const cards = [
