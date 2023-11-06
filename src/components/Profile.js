@@ -1,7 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-import { Stack, Box, Avatar, Typography, Divider } from '@mui/material'
+import { Stack, Box, Avatar, Typography } from '@mui/material'
 import EmailIcon from '@mui/icons-material/Email'
 
 import ProfilePicture from '../assets/profile_picture.jpg'

@@ -1,6 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material'
+import { Box, Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LaunchIcon from '@mui/icons-material/Launch'
 import NewspaperIcon from '@mui/icons-material/Newspaper'
