@@ -24,7 +24,7 @@ const cards = [
       'https://github.com/ShaneIsrael/word-game-site/blob/main/client/public/android-chrome-192x192.png?raw=true',
     title: 'Words But With Letters',
     body: ' A unique take on a daily 5 letter word game complete with daily and weekly leaderboards. Supports ranked and casual play with ranked requiring an email verified account.',
-    projectLink: 'https://github.com/ShaneIsrael/word-game-site',
+    projectLink: 'https://github.com/ShaneIsrael/WordsButWithLetters#readme',
     site: 'https://wordsbutwithletters.com',
   },
   {
