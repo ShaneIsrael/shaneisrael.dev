@@ -20,16 +20,22 @@ const Profile = (props) => {
         </Typography>
 
         <Stack direction="row" gap={2} mb={2}>
-          <Box sx={{ cursor: 'pointer' }} onClick={() => {
-            umami.track(`mailto contact - opened`)
-            window.open('mailto:shanemisrael@gmail.com')
-          }}>
+          <Box
+            sx={{ cursor: 'pointer' }}
+            onClick={() => {
+              umami.track(`mailto contact - opened`)
+              window.open('mailto:shanemisrael@gmail.com')
+            }}
+          >
             <EmailIcon fontSize="medium" sx={{ mr: 0.5 }} />
           </Box>
-          <Box sx={{ cursor: 'pointer' }} onClick={() => {
-            umami.track(`GitHub Profile - opened`)
-            window.open('https://github.com/ShaneIsrael', '_blank')
-          }}>
+          <Box
+            sx={{ cursor: 'pointer' }}
+            onClick={() => {
+              umami.track(`GitHub Profile - opened`)
+              window.open('https://github.com/ShaneIsrael', '_blank')
+            }}
+          >
             <GitHubIcon fontSize="medium" sx={{ mr: 0.5 }} />
           </Box>
           <Box

@@ -13,6 +13,12 @@ import ProjectCard from './components/ProjectCard'
 
 const cards = [
   {
+    imageSrc: 'https://files.shaneisrael.net/api/public/dl/xuMSja0S/public/logo.svg',
+    title: 'Snapsmaps',
+    body: 'Photo sharing social media site where share the location of your photo on an interactive map with your friends and followers. ',
+    site: 'https://snapsmaps.com',
+  },
+  {
     imageSrc: 'https://github.com/ShaneIsrael/fireshare/raw/main/app/client/src/assets/logo.png',
     title: 'Fireshare',
     body: 'Self-host and share your game clips, videos, or other media via unique links. Currently sitting at 62,000+ installs.',

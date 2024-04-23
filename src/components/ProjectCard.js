@@ -41,9 +41,11 @@ const ProjectCard = ({ imageSrc, title, body, projectLink, site, article }) => {
         </Grid>
         <Grid item>
           <CardActions sx={{ px: 2, pt: 0 }}>
-            <Box sx={{ cursor: 'pointer' }} onClick={() => openProject()}>
-              <GitHubIcon fontSize="medium" sx={{ mr: 0.5 }} />
-            </Box>
+            {projectLink && (
+              <Box sx={{ cursor: 'pointer' }} onClick={() => openProject()}>
+                <GitHubIcon fontSize="medium" sx={{ mr: 0.5 }} />
+              </Box>
+            )}
             {site && (
               <Box sx={{ cursor: 'pointer' }} onClick={() => openSite()}>
                 <LaunchIcon fontSize="medium" sx={{ mr: 0.5 }} />
